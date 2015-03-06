@@ -15,7 +15,7 @@ namespace Snake
             Food food = new Food();
             Wall fence = new Wall();
 
-            Console.SetWindowSize(41, 41);
+            Console.SetWindowSize(50, 50);
 
             ConsoleKeyInfo keyInfo;
 
@@ -30,22 +30,28 @@ namespace Snake
                     case ConsoleKey.UpArrow:
                         if (worm.Move(0, -1, food.location) == 2)
                         {
-                            food = new Food();
-                            fence = new Wall();
+                            food = new Food();                         
                         }
                         if (worm.Move(0, -1, food.location) == 3) 
                         {
+                            Console.SetCursorPosition(20,20);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Gave Over");
+                            Console.ReadKey();
                             return;
                         }
                         break;
                     case ConsoleKey.DownArrow:
                         if (worm.Move(0, 1, food.location) == 2)
                         {
-                            food = new Food();
-                            fence = new Wall();
+                            food = new Food();                       
                         }
-                        if (worm.Move(0, -1, food.location) == 3)
+                        if (worm.Move(0, 1, food.location) == 3)
                         {
+                            Console.SetCursorPosition(20, 20);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Gave Over");
+                            Console.ReadKey();
                             return;
                         }
                         break;
@@ -53,21 +59,27 @@ namespace Snake
                         if (worm.Move(-1, 0, food.location) == 2)
                         {
                             food = new Food();
-                            fence = new Wall();
                         }
-                        if (worm.Move(0, -1, food.location) == 3)
+                        if (worm.Move(-1, 0, food.location) == 3)
                         {
+                            Console.SetCursorPosition(20, 20);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Gave Over");
+                            Console.ReadKey();
                             return;
                         }
                         break;
                     case ConsoleKey.RightArrow:
                         if (worm.Move(1, 0, food.location) == 2)
                         {
-                            food = new Food();
-                            fence = new Wall();
+                            food = new Food();  
                         }
-                        if (worm.Move(0, -1, food.location) == 3)
-                        {                           
+                        if (worm.Move(1, 0, food.location) == 3)
+                        {
+                            Console.SetCursorPosition(20,20);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Gave Over");
+                            Console.ReadKey();
                             return;
                         }
                         break;

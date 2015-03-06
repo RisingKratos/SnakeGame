@@ -12,8 +12,9 @@ namespace Snake.Items
         public Point location = new Point();
         public Food()
         {
-            location.X = new Random().Next() % 40 + 1;
-            location.Y = new Random().Next() % 40 + 1;
+                        
+            location.X = new Random().Next() % 30;
+            location.Y = new Random().Next() % 30;            
             Show();
         }
 

@@ -13,14 +13,10 @@ namespace Snake.Items
         List<Point> fence = null;
         public Wall()
         {
+            
             fence = new List<Point>();
-            for (int i = 0; i < 41; ++i)
-            {
-                fence.Add(new Point { X = i, Y = 0 });
-                fence.Add(new Point { X = 0, Y = i});
-                fence.Add(new Point { X = i, Y = 40});
-                fence.Add(new Point { X = 40, Y = i });
-            }              
+            fence.Add(new Point{ X = 10,Y = 5 });
+           
             Show();
         }
         public void Show()

@@ -13,7 +13,7 @@ namespace Snake.Items
         public MySnake()
         {
             body = new List<Point>();
-            body.Add(new Point { X = 10, Y = 10 });
+            body.Add(new Point { X = 1, Y = 1 });
             Show();
         }
         public void Show()
